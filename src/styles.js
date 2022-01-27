@@ -85,6 +85,57 @@ export default css`
     }
   }
 
+  @keyframes mopping {
+    0% {
+      transform: rotate(0) translate(0);
+    }
+    5% {
+      transform: rotate(0) translate(0, -10px);
+    }
+    10% {
+      transform: rotate(0) translate(0, 5px);
+    }
+    15% {
+      transform: rotate(0) translate(0);
+    }
+    /* Turn left */
+    20% {
+      transform: rotate(30deg) translate(0);
+    }
+    25% {
+      transform: rotate(30deg) translate(0, -10px);
+    }
+    30% {
+      transform: rotate(30deg) translate(0, 5px);
+    }
+    35% {
+      transform: rotate(30deg) translate(0);
+    }
+    40% {
+      transform: rotate(0) translate(0);
+    }
+    /* Turn right */
+    45% {
+      transform: rotate(-30deg) translate(0);
+    }
+    50% {
+      transform: rotate(-30deg) translate(0, -10px);
+    }
+    55% {
+      transform: rotate(-30deg) translate(0, 5px);
+    }
+    60% {
+      transform: rotate(-30deg) translate(0);
+    }
+    70% {
+      transform: rotate(0deg) translate(0);
+    }
+    /* Staying still */
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
   @keyframes returning {
     0% {
       transform: rotate(0);
@@ -113,6 +164,7 @@ export default css`
 
   .vacuum.on,
   .vacuum.cleaning,
+  .vacuum.mopping,
   .vacuum.auto,
   .vacuum.spot,
   .vacuum.edge,
