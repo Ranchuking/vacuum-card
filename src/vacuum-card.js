@@ -401,6 +401,7 @@ class VacuumCard extends LitElement {
       case 'spot':
       case 'edge':
       case 'single_room':
+      case 'mopping':
       case 'cleaning': {
         return html`
           <div class="toolbar">
